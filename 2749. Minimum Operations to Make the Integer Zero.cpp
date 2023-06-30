@@ -1,3 +1,6 @@
+#include<bits/stdc++.h>
+using namespace std;
+
 class Solution {
 public:
     int countBits(long long num){
@@ -18,3 +21,11 @@ public:
         return -1;
     }
 };
+
+int main() {
+    int nums1 = 3,nums2 = -2;
+    Solution obj1;
+    int ans = obj1.makeTheIntegerZero(nums1,nums2);
+    cout<<ans<<" ";
+    return 0;
+}
