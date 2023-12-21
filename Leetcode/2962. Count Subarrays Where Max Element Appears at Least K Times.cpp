@@ -41,3 +41,24 @@ public:
         return res;
     }
 };
+
+//3rd solution:
+
+class Solution {
+public:
+    long long countSubarrays(vector<int>& nums, int k) {
+        int n = nums.size();
+        int maxi = *max_element(nums.begin(),nums.end());
+        long long res = 0;
+        int i = 0,count = 0;
+        for(int j = 0;j<n;j++){
+            if(nums[j] == maxi) count++;
+            while(count >= k){
+                count -= nums[i++] == maxi;
+            }
+            res += i;
+        }
+        return res;
+    }
+};
+
