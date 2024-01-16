@@ -1,27 +1,30 @@
-// * * * * *
-// * * * * *
-// * * * * *
-// * * * * *
-// * * * * *
+// pattern-18
+
+// C
+// C B
+// C B A
+
 #include <bits/stdc++.h>
+
 using namespace std;
 
 class Solution
 {
 public:
-    void printSquare(int n)
+    void alphaTriangle(int n)
     {
+        // Write your code here.
         for (int i = 0; i < n; i++)
         {
-            for (int j = 0; j < n; j++)
+            for (char j = ('A' + n - 1); j >= ('A' + n - 1) - i; j--)
             {
-                cout << "*"
-                     << " ";
+                cout << j << " ";
             }
-            cout << "\n";
+            cout << endl;
         }
     }
 };
+
 int main()
 {
     int t;
@@ -32,7 +35,7 @@ int main()
         cin >> n;
 
         Solution ob;
-        ob.printSquare(n);
+        ob.alphaTriangle(n);
     }
     return 0;
 }

@@ -1,8 +1,8 @@
-// * * * * *
-// * * * *
-// * * *
-// * *
-// *
+// pattern-15
+
+// A B C
+// A B
+// A
 
 #include <bits/stdc++.h>
 
@@ -11,17 +11,15 @@ using namespace std;
 class Solution
 {
 public:
-    void printTriangle(int n)
+    void nLetterTriangle(int n)
     {
-        // code here
         for (int i = n - 1; i >= 0; i--)
         {
-            for (int j = 0; j <= i; j++)
+            for (char j = 'A'; j <= 'A' + i; j++)
             {
-                cout << "*"
-                     << " ";
+                cout << j << " ";
             }
-            cout << "\n";
+            cout << endl;
         }
     }
 };
@@ -36,7 +34,7 @@ int main()
         cin >> n;
 
         Solution ob;
-        ob.printTriangle(n);
+        ob.nLetterTriangle(n);
     }
     return 0;
 }

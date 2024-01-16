@@ -1,8 +1,8 @@
-//     *
-//    ***
-//   *****
-//  *******
-// *********
+// pattern-17
+
+//    A
+//   A B A
+// A B C B A
 
 #include <bits/stdc++.h>
 
@@ -11,24 +11,29 @@ using namespace std;
 class Solution
 {
 public:
-    void printTriangle(int n)
+    void alphaHill(int n)
     {
-        // code here
+        // Write your code here.
         for (int i = 0; i < n; i++)
         {
             for (int j = 0; j < n - i - 1; j++)
             {
                 cout << " ";
             }
-            for (int k = 0; k < 2 * i + 1; k++)
+            char ch = 'A';
+            for (int k = 1; k <= 2 * i + 1; k++)
             {
-                cout << "*";
+                cout << ch << " ";
+                if (k <= i)
+                    ch++;
+                else
+                    ch--;
             }
             for (int j = 0; j < n - i - 1; j++)
             {
                 cout << " ";
             }
-            cout << "\n";
+            cout << endl;
         }
     }
 };
@@ -43,7 +48,7 @@ int main()
         cin >> n;
 
         Solution ob;
-        ob.printTriangle(n);
+        ob.alphaHill(n);
     }
     return 0;
 }

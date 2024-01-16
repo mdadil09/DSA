@@ -1,8 +1,8 @@
-// pattern-11
+// pattern-21
 
-// 1
-// 0 1
-// 1 0 1
+// ***
+// * *
+// ***
 
 #include <bits/stdc++.h>
 
@@ -11,20 +11,21 @@ using namespace std;
 class Solution
 {
 public:
-    void nBinaryTriangle(int n)
+    void getStarPattern(int n)
     {
         // Write your code here.
         for (int i = 0; i < n; i++)
         {
-            int start = 1;
-            if (i % 2 == 0)
-                start = 1;
-            else
-                start = 0;
-            for (int j = 0; j <= i; j++)
+            for (int j = 0; j < n; j++)
             {
-                cout << start << " ";
-                start = 1 - start;
+                if (i == 0 || j == 0 || i == n - 1 || j == n - 1)
+                {
+                    cout << "*";
+                }
+                else
+                {
+                    cout << " ";
+                }
             }
             cout << endl;
         }
@@ -41,7 +42,7 @@ int main()
         cin >> n;
 
         Solution ob;
-        ob.nBinaryTriangle(n);
+        ob.getStarPattern(n);
     }
     return 0;
 }

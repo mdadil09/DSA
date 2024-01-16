@@ -8,30 +8,31 @@
 
 using namespace std;
 
-// } Driver Code Ends
-//Back-end complete function Template for C++
-class Solution{
+class Solution
+{
 public:
-    void nNumberTriangle(int n) {
+    void nNumberTriangle(int n)
+    {
         // Write your code here.
         int num = 1;
-        for(int i=1;i<=n;i++){
-            for(int j=1;j<=i;j++){
-                cout<<num<<" ";
-                num = num+1;
+        for (int i = 1; i <= n; i++)
+        {
+            for (int j = 1; j <= i; j++)
+            {
+                cout << num << " ";
+                num = num + 1;
             }
-            cout<<endl;
+            cout << endl;
         }
     }
-
 };
 
-//{ Driver Code Starts.
-
-int main() {
+int main()
+{
     int t;
     cin >> t;
-    while (t--) {
+    while (t--)
+    {
         int n;
         cin >> n;
 
@@ -40,4 +41,3 @@ int main() {
     }
     return 0;
 }
-// } Driver Code Ends

@@ -1,8 +1,8 @@
-// * * * * *
-// * * * *
-// * * *
-// * *
-// *
+// pattern-16
+
+// A
+// B B
+// C C C
 
 #include <bits/stdc++.h>
 
@@ -11,17 +11,17 @@ using namespace std;
 class Solution
 {
 public:
-    void printTriangle(int n)
+    void alphaRamp(int n)
     {
-        // code here
-        for (int i = n - 1; i >= 0; i--)
+        // Write your code here.
+        for (int i = 0; i < n; i++)
         {
+            char ch = 'A' + i;
             for (int j = 0; j <= i; j++)
             {
-                cout << "*"
-                     << " ";
+                cout << ch << " ";
             }
-            cout << "\n";
+            cout << endl;
         }
     }
 };
@@ -36,7 +36,7 @@ int main()
         cin >> n;
 
         Solution ob;
-        ob.printTriangle(n);
+        ob.alphaRamp(n);
     }
     return 0;
 }
